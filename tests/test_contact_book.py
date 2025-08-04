@@ -5,6 +5,7 @@ from src.contact import Contact
 class TestContactBook(unittest.TestCase):
 
     def setUp(self):
+        print("running setup")
         self.book = ContactBook()
         self.c1 = Contact(name="Alice", surname="Smith", phone={"mobile": ["1234"]})
         self.c2 = Contact(name="Bob", surname="Brown", email={"personal": ["bob@mail.com"]})

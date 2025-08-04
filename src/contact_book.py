@@ -1,6 +1,6 @@
 import json
 import csv
-from contact import Contact  # adjust import path as needed
+from src.contact import Contact  # adjust import path as needed
 
 class ContactBook:
     """
