@@ -1,0 +1,67 @@
+{
+    "contacts": [
+        {
+            "name": "Alice",
+            "surname": "Smith",
+            "phone": {
+                "mobile": [
+                    "1234567890"
+                ]
+            },
+            "email": {
+                "personal": [
+                    "alice@example.com"
+                ]
+            },
+            "address": "123 Main Street"
+        },
+        {
+            "name": "Bob",
+            "surname": "Smith",
+            "phone": {
+                "home": [
+                    "9876543210"
+                ],
+                "work": [
+                    "1234567890"
+                ]
+            },
+            "email": {
+                "work": [
+                    "bob@company.com"
+                ]
+            },
+            "address": "456 Maple Avenue"
+        },
+        {
+            "name": "Alice",
+            "surname": "Johnson",
+            "phone": {
+                "mobile": [
+                    "5555555555"
+                ]
+            },
+            "email": {
+                "personal": [
+                    "alicej@example.com"
+                ]
+            },
+            "address": "789 Oak Road"
+        },
+        {
+            "name": "Charlie",
+            "surname": "Brown",
+            "phone": {
+                "other": [
+                    "9876543210"
+                ]
+            },
+            "email": {
+                "other": [
+                    "charlie.b@example.com"
+                ]
+            },
+            "address": "101 Pine Street"
+        }
+    ]
+}
