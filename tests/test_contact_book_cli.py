@@ -9,6 +9,7 @@ from src.contact_book import ContactBook, Contact
 
 class TestContactBookCLI(unittest.TestCase):
     def setUp(self):
+        print("running setup")
         self.cli = ContactBookCLI()
         self.cli.book = ContactBook()
         self.cli.saved = True
@@ -135,7 +136,7 @@ class TestContactBookCLI(unittest.TestCase):
     def test_save_book_menu(self, mock_print, mock_input):
         self.cli.book.save_to_json = MagicMock()
         self.cli.save_book_menu()
-        self.cli.book.save_to_json.assert_called_with(Path('/fake/path/testfile.json'))
+        self.cli.book.save_to_json.assert_called_with('/fake/path\\testfile.json')
         self.assertTrue(self.cli.saved)
 
     @patch('builtins.input', side_effect=[
@@ -213,7 +214,7 @@ class TestContactBookCLI(unittest.TestCase):
         '3'
     ])
     @patch('builtins.print')
-    def test_load_file_not_found(self, mock_print):
+    def test_load_file_not_found(self, mock_print, mock_input):
         self.cli.run()
         self.assertEqual(len(self.cli.book.contacts),0)
         mock_print.assert_any_call("Goodbye!")
@@ -225,7 +226,7 @@ class TestContactBookCLI(unittest.TestCase):
         '3'
     ])
     @patch('builtins.print')
-    def test_load_file(self, mock_print):
+    def test_load_file(self, mock_print, mock_input):
         self.cli.run()
         self.assertEqual(len(self.cli.book.contacts),1)
         mock_print.assert_any_call("Goodbye!")

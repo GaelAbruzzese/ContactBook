@@ -1,6 +1,6 @@
 import os
-from contact_book import ContactBook
-from contact import Contact
+from src.contact_book import ContactBook
+from src.contact import Contact
 
 class ContactBookCLI:
     def __init__(self):
