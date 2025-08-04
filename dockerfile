@@ -4,10 +4,11 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY requirements.txt
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY ./src
+COPY ./src .
+
 
 
 CMD ["python","main.py"]
