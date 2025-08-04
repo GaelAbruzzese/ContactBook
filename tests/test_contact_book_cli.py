@@ -136,7 +136,7 @@ class TestContactBookCLI(unittest.TestCase):
     def test_save_book_menu(self, mock_print, mock_input):
         self.cli.book.save_to_json = MagicMock()
         self.cli.save_book_menu()
-        self.cli.book.save_to_json.assert_called_with('/fake/path\\testfile.json')
+        self.cli.book.save_to_json.assert_called_with(os.path.join('/fake/path','testfile.json'))
         self.assertTrue(self.cli.saved)
 
     @patch('builtins.input', side_effect=[
@@ -265,4 +265,6 @@ class TestContactBookCLI(unittest.TestCase):
 
 
 if __name__ == '__main__':
+
     unittest.main()
+
